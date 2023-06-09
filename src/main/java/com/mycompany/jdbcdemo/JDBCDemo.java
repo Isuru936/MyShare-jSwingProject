@@ -3,24 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
 package com.mycompany.jdbcdemo;
-/*pushed by vinuka*/
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
-/**
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-/** this is pushed by isuru
-* /this is pushed by vinuka
- *
- * @author issur
- */
 public class JDBCDemo {
 
     public static void main(String[] args) {
