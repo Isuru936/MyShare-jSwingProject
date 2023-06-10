@@ -26,11 +26,13 @@ public class JDBCDemo {
 
             while (resultSet.next()) {
                 System.out.println(resultSet.getInt(1));
+                System.out.println("Code executed");
             }
 
             connection.close();
         } catch (Exception e) {
             System.out.println(e);
+            System.out.println("fuck");
         }
     }
 }
