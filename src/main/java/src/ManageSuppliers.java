@@ -273,7 +273,6 @@ public class ManageSuppliers extends javax.swing.JFrame {
 
         lblHeading1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         lblHeading1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeading1.setIcon(new javax.swing.ImageIcon("D:\\oop project finale\\MyShare-G3 - Finalized\\images\\update x50.png")); // NOI18N
         lblHeading1.setText("Update Details");
 
         btnUpdate.setBackground(new java.awt.Color(0, 0, 0));
@@ -459,7 +458,6 @@ public class ManageSuppliers extends javax.swing.JFrame {
 
         lblHeading2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         lblHeading2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeading2.setIcon(new javax.swing.ImageIcon("D:\\oop project finale\\MyShare-G3 - Finalized\\images\\add x50.png")); // NOI18N
         lblHeading2.setText("Add Details");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);

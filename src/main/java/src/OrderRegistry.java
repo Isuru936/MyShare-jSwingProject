@@ -888,7 +888,7 @@ public class OrderRegistry extends javax.swing.JFrame {
     private void lblLogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblLogoutMouseClicked
         // TODO add your handling code here:
         this.dispose();
-        EmployeeLogIn employeeLogIn =  new EmployeeLogIn();
+        Login employeeLogIn =  new Login();
         employeeLogIn.setVisible(true);
     }//GEN-LAST:event_lblLogoutMouseClicked
 

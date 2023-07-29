@@ -250,7 +250,7 @@ public class Dashboard extends javax.swing.JFrame {
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
         this.dispose();
-        AdminLogIn adminLogin = new AdminLogIn();
+        NOTUSEDAdminLogin adminLogin = new NOTUSEDAdminLogin();
         adminLogin.setVisible(true);
     }//GEN-LAST:event_jLabel1MouseClicked
 
