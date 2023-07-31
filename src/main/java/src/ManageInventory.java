@@ -1,5 +1,6 @@
 package src;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -372,6 +373,9 @@ public class ManageInventory extends javax.swing.JFrame {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTextField1FocusGained(evt);
             }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField1FocusLost(evt);
+            }
         });
         jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -712,8 +716,27 @@ public class ManageInventory extends javax.swing.JFrame {
 
     private void jTextField1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusGained
         // TODO add your handling code here:
-        String lk = "";
+        String search = jTextField1.getText();
+        if(search.isEmpty()){
+            jTextField1.setText("Search...");
+            jTextField1.setForeground(new Color(204,204,204));
+        } else {
+            jTextField1.setText("");
+            jTextField1.setForeground(Color.BLACK);
+        }
     }//GEN-LAST:event_jTextField1FocusGained
+
+    private void jTextField1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusLost
+        // TODO add your handling code here:
+        String search = jTextField1.getText();
+        if(search.isEmpty()){
+            jTextField1.setText("Search...");
+            jTextField1.setForeground(new Color(204,204,204));
+        } else {
+//            jTextField1.setText("");
+            jTextField1.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_jTextField1FocusLost
 
     /**
      * @param args the command line arguments

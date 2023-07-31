@@ -29,6 +29,7 @@ public class OrderRegistry extends javax.swing.JFrame {
     Connection con;
     Statement statement;
     OrderController orderCon;
+    static double price = 0.0;
 
     /**
      * Creates new form ordeRegistery
@@ -200,7 +201,6 @@ public class OrderRegistry extends javax.swing.JFrame {
         lblheading.setText("Order Registery(Cashier)");
 
         lblLogout.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lblLogout.setIcon(new javax.swing.ImageIcon("D:\\oop project finale\\MyShare-G3 - Finalized\\images\\logout.png")); // NOI18N
         lblLogout.setText("Logout");
         lblLogout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -381,6 +381,11 @@ public class OrderRegistry extends javax.swing.JFrame {
         jLabel2.setText("Objective");
 
         cmbObjAdv.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Awareness", "Marketing", "Charity" }));
+        cmbObjAdv.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cmbObjAdvItemStateChanged(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -708,8 +713,6 @@ public class OrderRegistry extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         //TEMPORAY
-        int total = 450;
-        lblTotal1.setText("450");
 
         String cusName = txtName1.getText();
         String cusTP = txtTele1.getText();
@@ -891,6 +894,25 @@ public class OrderRegistry extends javax.swing.JFrame {
         Login employeeLogIn =  new Login();
         employeeLogIn.setVisible(true);
     }//GEN-LAST:event_lblLogoutMouseClicked
+
+    private void cmbObjAdvItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbObjAdvItemStateChanged
+        // TODO add your handling code here:
+        String obj = cmbObjAdv.getSelectedItem().toString();
+        switch(obj){
+            case "Awareness":
+                price += 350.20;
+                break;
+            case "Charity":
+                price += 400.0;
+                break;
+            case "Marketing":
+                price += 125.30;
+                break;
+            default:
+                price = 0;
+        }
+        lblTotal1.setText(String.valueOf(price));
+    }//GEN-LAST:event_cmbObjAdvItemStateChanged
 
     /**
      * @param args the command line arguments
